@@ -7,4 +7,8 @@ windows:
 clean:
 	rm -rf ./dist
 
-all: build windows
+zip:
+	zip -j ./dist/windows.zip ./dist/spaghet.exe
+	zip -j ./dist/linux.zip ./dist/spaghet
+
+all: build windows zip
